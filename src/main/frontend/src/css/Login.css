@@ -1,0 +1,36 @@
+.loginregister__input {
+  width: 341px;
+  height: 42px;
+  padding-left: 10px;
+  margin: 10px;
+}
+
+.loginregister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.button {
+  width: 100px;
+  /* 위 | 오른쪽 | 아래 | 왼쪽 */
+  margin: 20px auto 10px auto;
+  display: block;
+  background-color: darkred;
+  color: aliceblue;
+}
+
+.letter {
+  margin: auto;
+  display: inline-block;
+  font-family: Georgia, 'Malgun Gothic', serif;
+  font-size: medium;
+}
+.kr {
+  color: gray;
+}
+
+.all {
+  border: 1px solid gray;
+}
