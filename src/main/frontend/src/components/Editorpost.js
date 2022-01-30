@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import ReactDOM from 'react-dom'
+import '../css/Editor.css'
 
 // import 'codemirror/lib/codemirror.css'
 import Prism from 'prismjs'
@@ -20,83 +21,83 @@ import colorSyntax from '@toast-ui/editor-plugin-color-syntax'
 import Viewer from '@toast-ui/editor/dist/toastui-editor-viewer'
 import '@toast-ui/editor/dist/toastui-editor-viewer.css'
 
-function Editorpost() {
-  //에디터를 가리킴
-  const editorRef = useRef()
-  // const viewerRef = useRef()
+function EditorPost() {
+    //에디터를 가리킴
+    const editorRef = useRef()
+    // const viewerRef = useRef()
 
-  const btnClickListener = () => {
-    const editorInstance = editorRef.current.getInstance()
-    const getContent_md = editorInstance.getMarkdown()
-    console.log('-- 마크다운 --')
-    // console.log(getContent_md)
+    const btnClickListener = () => {
+        const editorInstance = editorRef.current.getInstance()
+        const getContent_md = editorInstance.getMarkdown()
+        console.log('-- 마크다운 --')
+        // console.log(getContent_md)
 
-    //Editor 버전 2.x는 getHtml(), 3.x는 getHTML()
-    const getContent_html = editorInstance.getHTML()
-    console.log('-- HTML --')
-    // console.log(getContent_html)
+        //Editor 버전 2.x는 getHtml(), 3.x는 getHTML()
+        const getContent_html = editorInstance.getHTML()
+        console.log('-- HTML --')
+        // console.log(getContent_html)
 
-    localStorage.setItem('paragraph', getContent_html)
-  }
+        localStorage.setItem('paragraph', getContent_html)
+    }
 
-  const View = () => {
-    const test = document.querySelector('#viewer')
+    const View = () => {
+        const test = document.querySelector('#viewer')
 
-    // const viewerInstance = viewerRef.current.getInstance()
-    const view = localStorage.getItem('paragraph')
-    test.innerHTML = view
+        // const viewerInstance = viewerRef.current.getInstance()
+        const view = localStorage.getItem('paragraph')
+        test.innerHTML = view
 
-    // viewerInstance.setMarkdown(view)
-    // paintGreeting(view);
+        // viewerInstance.setMarkdown(view)
+        // paintGreeting(view);
 
-    console.log(view)
-  }
+        console.log(view)
+    }
 
-  // const ToView = (getContent_md) => {
-  //   const editorInstance = editorRef.current.getInstance()
-  //   editorInstance.setMarkdown(getContent_md)
-  // }
+    return (
+        <div>
+            <h1 className="title">에러 작성</h1>
+            <div className="full-container flex">
+                <div className="flex-container flex">
+                    <div className="box2">에러명</div>
+                    <input
+                        className="post_error_name"
+                        type="search"
+                        aria-label="HomeSearch"
+                    />
+                </div>
+                <div className="flex-container flex">
+                    <div className="box2">카테고리</div>
+                    <input
+                        className="post_error_name"
+                        type="search"
+                        aria-label="HomeSearch"
+                    />
+                </div>
+                <div>
+                    <Editor
+                        previewStyle="vertical"
+                        height="40vh"
+                        initialEditType="markdown"
+                        initialValue="내용을 입력하세요."
+                        plugins={[colorSyntax, [codeSyntaxHighlight, { highlighter: Prism }]]}
+                        ref={editorRef}
+                    />
+                </div>
 
-  // const GetContent = () => {
-  //   const editorInstance = editorRef.current.getInstance()
-  //   const getContent_md = editorInstance.getMarkdown()
-  //   editorInstance.setMarkdown(getContent_md)
-  // }
-  // const viewer = new Viewer({
-  //   el: document.querySelector('#viewer'),
-  //   height: '600px',
-  //   initialValue: getContent_md,
-  // })
+                <button onClick={btnClickListener} type="submit" className="submitBtn">
+                    Post
+                </button>
+                <button onClick={View} className="cancelBtn">
+                    Cancel
+                </button>
 
-  // console.log(viewer)
-
-  return (
-    <div>
-      <h1> TOAST UI Editor 만들기 </h1>
-      <div>
-        <Editor
-          previewStyle="vertical"
-          height="70vh"
-          initialEditType="markdown"
-          initialValue="마크다운으로 내용을 입력하세요."
-          plugins={[colorSyntax, [codeSyntaxHighlight, { highlighter: Prism }]]}
-          ref={editorRef}
-        />
-      </div>
-
-      <button onClick={btnClickListener} type="submit" className="submitBtn">
-        Post
-      </button>
-      <button onClick={View} className="cancelBtn">
-        Cancel
-      </button>
-
-      <div>
-        <h1> TOAST UI Viewer 만들기 </h1>
-        <div id="viewer"></div>
-      </div>
-    </div>
-  )
+                <div>
+                    <h1> TOAST UI Viewer 만들기 </h1>
+                    <div id="viewer"></div>
+                </div>
+            </div>
+        </div>
+    )
 }
 
-export default Editorpost
+export default EditorPost
