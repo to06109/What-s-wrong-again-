@@ -1,0 +1,234 @@
+.form {
+  width: 1020px;
+  height: 60px;
+  /* 위 | 오른쪽 | 아래 | 왼쪽 */
+  margin: 100px auto 10px auto;
+}
+.search {
+  width: 900px;
+  height: 60px;
+}
+.search-button {
+  margin-right: 20px;
+  width: 100px;
+  height: 60px;
+  border-left: none;
+}
+
+.dropdown-toggle.btn.btn-success {
+  width: 160px;
+  height: 60px;
+  background-color: white;
+  color: gray;
+  border-color: black;
+  margin: 100px 10px 10px 90px;
+}
+
+.dropdown-toggle.btn.btn-success::after {
+  color: darkred;
+}
+
+.logout {
+  width: 110px;
+  height: 60px;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  border: gray;
+  border-radius: 10px;
+  margin: 80px 30px 50px 30px;
+}
+
+.flex-container {
+  /* 가로배치 */
+  display: inline-flex;
+  margin: 10px;
+  /* border: 1px solid lightgray; */
+  border-radius: 10px;
+  /* background-color: aliceblue; */
+  font-size: 24px;
+}
+
+.full-container {
+  /*세로배치*/
+  margin: 10px;
+  /* border: 1px solid lightgray; */
+  border-radius: 10px;
+  /* background-color: aliceblue; */
+  font-size: 24px;
+}
+
+.flex-container.center {
+  justify-content: center;
+}
+.flex-container.space-betweeen {
+  justify-content: space-between;
+}
+
+.img {
+  width: auto;
+  height: auto;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.flex {
+  text-align: center;
+}
+
+.post {
+  max-width: 90em;
+}
+
+.box {
+  width: 90px;
+}
+
+.mypage {
+  width: 250px;
+}
+
+.board {
+  width: 1000px;
+}
+
+.category {
+  width: 300px;
+}
+
+.category-letter {
+  font-weight: bold;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.category-container {
+  height: 450px;
+}
+
+.category-bold {
+  font-weight: bolder;
+  color: darkred;
+}
+
+#category-language {
+  color: rgb(56, 56, 56);
+  margin-right: 10%;
+}
+
+#category-framework {
+  color: rgb(56, 56, 56);
+  margin-right: 10%;
+}
+
+#category-dropdown {
+  text-align: left;
+}
+.full {
+  /* overflow: scroll; */
+  width: 100%;
+  height: 100%;
+}
+
+.board-box {
+  /* height: 266px;
+  width: 398px; */
+  height: 300px;
+  width: 450px;
+  border-radius: 2px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  background-color: white;
+  font-size: 24px;
+}
+
+.line {
+  margin: auto;
+  width: 370px;
+  height: 20px;
+  opacity: 1;
+  background-color: darkred;
+  color: darkred;
+  border: 2px solid darkred;
+}
+
+.contents {
+  margin-left: 50px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.mypage-box {
+  /* 위 | 오른쪽 | 아래 | 왼쪽 */
+  margin: 20px auto 0px auto;
+  width: 220px;
+  height: 300px;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.mypage-line {
+  margin: auto;
+  margin-bottom: 40px;
+  width: 200px;
+  color: gray;
+  border: thin solid gray;
+}
+
+.notice {
+  margin-left: 40px;
+  text-align: left;
+}
+
+.user-img {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.introduce-line {
+  margin: auto;
+  width: 100%;
+  border: thin solid rgb(124, 0, 0);
+}
+
+.introduce {
+  /* 위 | 오른쪽 | 아래 | 왼쪽 */
+  margin: 5% 1% 2% auto;
+
+  text-align: right;
+  font-family: initial;
+}
+
+.background-white {
+  background-color: white;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.text-left {
+  margin-top: 2%;
+  margin-left: 2%;
+  text-align: left;
+}
+
+.test {
+  border-bottom: 8px;
+  background-color: aliceblue;
+  border-color: aliceblue;
+  border-bottom: darkred;
+  font-size: 20px;
+}
+
+.category-letter {
+  /* 위 | 오른쪽 | 아래 | 왼쪽 */
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: black;
+}
