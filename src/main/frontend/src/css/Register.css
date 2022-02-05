@@ -5,3 +5,14 @@
   margin: 10px;
   border-radius: 10px;
 }
+
+.loginregister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.all {
+  border: 1px solid gray;
+}

@@ -1,14 +1,9 @@
 import Dropdown from 'react-bootstrap/Dropdown'
 import '../../css/Search.css'
 import { Link } from 'react-router-dom'
-
-const drop_style = {
-    'border-bottom': '2px solid darkred',
-    color: 'gray',
-    'background-color': 'white',
-    'border-color': 'aliceblue',
-    'font-size': '25px',
-}
+import React, {useState} from "react";
+import axios from "axios";
+import Button from "react-bootstrap/Button";
 
 function HomeSearch() {
     return (
@@ -18,7 +13,9 @@ function HomeSearch() {
             <div className="full-container center">
                 <div className="flex-container center">
                     <div>
+                        <Link to="/">
                         <img className="img" src="img/logo1.jpg" />
+                        </Link>
                     </div>
                 </div>
                 <div className="flex-container center">
@@ -51,10 +48,11 @@ function HomeSearch() {
                         </form>
                     </div>
                     <div className="flex-container center">
-                        <button className="logout">logout</button>
+                        <Link to= "login"><button className="logout">login</button></Link>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

@@ -1,7 +1,7 @@
-import Editor from '../components/EditorPost'
+import Editor from '../components/Editorpost'
 import Homecate from '../components/Home/HomeCategory'
 import HomeSearch from '../components/Home/HomeSearch'
-import HomeMypage from '../components/Home/HomeMypage'
+import HomeMypage from '../components/Home/HomeMyPage'
 
 function PostWrite() {
   return(

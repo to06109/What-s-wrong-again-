@@ -10,6 +10,7 @@ import Viewer from './routes/Viewer'
 function App() {
 
   return (
+      <div>
 
         <Router>
           <Switch>
@@ -33,6 +34,7 @@ function App() {
             </Route>
           </Switch>
         </Router>
+      </div>
   )
 }
 export default App

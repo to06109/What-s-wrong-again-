@@ -2,10 +2,13 @@
 // import Movie from '../components/Movie'
 import Homecate from '../components/Home/HomeCategory'
 import HomeSearch from '../components/Home/HomeSearch'
-import HomeMypage from '../components/Home/HomeMypage'
+import HomeMypage from '../components/Home/HomeMyPage'
 import HomeBoard from '../components/Home/HomeBoard'
+import Button from "react-bootstrap/Button";
+import React, {useState} from "react";
+import axios from "axios";
+import {Link} from "react-router-dom";
 function Home() {
-  // return <Homecomp />
   return (
       <div  className="flex-container center full">
         <div className="full-container flex">
@@ -41,6 +44,7 @@ function Home() {
           </div>
         </div>
       </div>
+
 
   )
 }
